@@ -1,0 +1,215 @@
+:root {
+    --clr-neon: hsl(317 100% 54%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "supercell", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: white;
+    overflow: hidden;
+}
+    body.pages::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+
+    body.pages::-webkit-scrollbar-track {
+        background: #434343;
+        border-radius: 10px;
+        box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
+    }
+
+    body.pages::-webkit-scrollbar-thumb {
+        background: linear-gradient( 90deg,#434343,#434343 1px,#262626 0,#262626);
+    }
+@font-face {
+    font-family: "Supercell";
+    src: url("supercell-magic-webfont.ttf");
+    src: url("supercell-magic-webfont.ttf") format("opentype");
+}
+.nav-bar {
+    background-color: #488bf4;
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 7vh;
+    position: sticky;
+    top: 0;
+}
+.nav-wrapper{
+    padding-top: 0.75em;
+    display: flex;
+    justify-content: space-between;
+}
+.nav-left{
+    display: flex;
+   
+
+}
+.nav-right{
+    display: flex;
+   
+}
+.nav-link{
+    padding-right: 0.75em;
+    padding-left: 0.75em;
+    color: white;
+    padding-top: 0.25em;
+    border-radius: 7%;
+}
+
+.nav-link:hover{
+    opacity: 0.8;
+}
+
+.landing-page {
+    height: 100vh;
+    background-image: url("cr_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1 {
+    padding: 0;
+    height: 7rem;
+    width: 7em;
+    font-family: "supercell", Arial, sans-serif;
+    font-size: 6em;
+    color: white;
+    text-shadow: 0 1px 5px grey, 0 4px 3px black;
+    display: flex;
+    cursor: default;
+}
+
+span:hover{
+    font-size: 7rem;
+    transform: translateY(-4vh);
+}
+
+#scroll-button{
+    color: red;
+    background: yellow;
+}
+
+
+
+
+ 
+
+/*.name {
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: url("text_bg.jpg");
+    animation: showup;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    background-size: 100%;
+}
+
+@keyframes showup {
+    0% {
+        background-size: 60%;
+    }
+
+    100% {
+        background-size: 100%;
+    }
+}
+*/
+
+.pages {
+    overflow: hidden;
+    overflow-y: scroll;
+    max-height: 100vh;
+    scroll-snap-type: y mandatory;
+}
+    .pages > div {
+        scroll-snap-align: end;
+    }
+
+
+
+/*.card-box {
+    border: 1px solid var(--clr-neon);
+    height: 30vw;
+    width: 25vw;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    box-shadow: 0 0 0.5em 0 var(--clr-neon);
+    border-radius: 2%;
+}
+
+    .card-box:hover {
+        box-shadow: 0 0 2em 0.5em var(--clr-neon);
+        transition: opacity 100ms linear;
+    }*/
+
+.card-container {
+    align-items: center;
+    width: 100vw;
+    overflow-x: scroll;
+    display: flex;
+    background-color: #100e17;
+    padding: 3rem;
+    height: 100vh;
+}
+.card {
+    min-width: 300px;
+    height: 350px;
+    border-radius: 16px;
+    background-color: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    transition: 0.2s;
+}
+
+
+
+.card .category-title {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.card .card-title {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.card .card-header {
+    margin-bottom: auto;
+}
+
+
+
+
+.card:not(:first-child) {
+    margin-left: -130px;
+}
+.card:hover {
+    transform: translateY(-1rem);
+}
+    .card:hover ~ .card {
+        transform: translateX(130px);
+    }
+
+body .card-container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+body .card-container::-webkit-scrollbar-thumb {
+    background: #434343;
+    border-radius: 10px;
+    box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%), inset -2px -2px 2px rgb(0 0 0 / 25%);
+}
+
+body .card-container::-webkit-scrollbar-track {
+    background: linear-gradient( 90deg,#434343,#434343 1px,#262626 0,#262626);
+}
