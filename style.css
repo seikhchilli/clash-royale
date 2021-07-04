@@ -213,3 +213,31 @@ body .card-container::-webkit-scrollbar-thumb {
 body .card-container::-webkit-scrollbar-track {
     background: linear-gradient( 90deg,#434343,#434343 1px,#262626 0,#262626);
 }
+
+.decks{
+    background: red;
+    height: 100vh;
+    display: block;
+}
+    .decks > div {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        height: 30vh;
+        border: 2px solid black;
+        padding: 2vh;
+    }
+.classic-deck {
+    
+}
+.meta-deck{
+
+}
+
+.ladder-deck{
+
+}
+.deck{
+   
+}
+display: grid;
+grid-template-columns: auto auto auto;
