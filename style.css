@@ -56,9 +56,17 @@ body {
     padding-top: 0.25em;
     border-radius: 7%;
 }
+.nav-link a{
+    text-decoration: none;
+    color: white;
+}
 
 .nav-link:hover{
-    opacity: 0.8;
+    opacity: 0.7;
+}
+
+.active{
+    opacity: 0.7;
 }
 
 .landing-page {
@@ -81,6 +89,7 @@ h1 {
     text-shadow: 0 1px 5px grey, 0 4px 3px black;
     display: flex;
     cursor: default;
+    user-select: none;
 }
 @media only screen and (max-width: 600px) {
     .landing-page {
@@ -243,6 +252,7 @@ h1 {
 .card-page {
     background-color: #100e17;
     height: 100vh;
+    
 }
 
 
@@ -251,7 +261,7 @@ h1 {
     overflow-x: scroll;
     display: flex;
     height: 80vh;
-    padding: 3rem;
+    padding: 2rem;
 }
 .card {
     min-width: 250px;
@@ -266,10 +276,7 @@ h1 {
     transition: 0.2s;
     transform: rotateY(5deg);
     transform-style: preserve-3d;
-}
-
-.flip-effect{
-
+    user-select: none;
 }
 
 .card > img {
@@ -378,5 +385,65 @@ img {
         box-shadow: 0 0 0.75em 0.25em var(--clr-neon);
         transition: opacity 100ms linear;
     }
+
+.card-landing-page {
+    height: 100vh;
+    overflow-y: scroll;
+    
+    scroll-snap-type: y proximity;
+}
+    .card-landing-page section {
+        scroll-snap-align: center;
+    }
+
+    .card-landing-page section h2{
+        margin: 0;
+        padding: 1em;
+    }
+
+.legendary {
+    background: url("img/card-page-legendary-bg.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.epic {
+    background: url("img/card-page-epic-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.rare {
+    background: url("img/card-page-rare-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.common {
+    background: url("img/card-page-common-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+@media only screen and (max-width: 600px){
+    .legendary {
+        background: url("img/phone-legendary-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .epic {
+        background: url("img/phone-epic-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .rare {
+        background: url("img/phone-rare-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .common {
+        background: url("img/phone-common-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+}
 
 
