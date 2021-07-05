@@ -34,10 +34,6 @@ body {
     grid-template-columns: 1fr;
     padding-bottom: 1em;
 }
-.nav-bar:hover{
-    opacity: 1;
-
-}
 
 .nav-wrapper{
     padding-top: 0.75em;
