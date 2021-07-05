@@ -37,7 +37,13 @@ body {
     height: 7vh;
     position: sticky;
     top: 0;
+    opacity: 0.3;
 }
+.nav-bar:hover{
+    opacity: 1;
+
+}
+
 .nav-wrapper{
     padding-top: 0.75em;
     display: flex;
@@ -68,7 +74,7 @@ body {
     height: 100vh;
     background-image: url("cr_bg.jpg");
     background-repeat: no-repeat;
-    background-size: 100vw 100vh;
+    background-size: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -122,14 +128,10 @@ span:hover{
 */
 
 .pages {
-    overflow: hidden;
-    overflow-y: scroll;
     max-height: 100vh;
-    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
 }
-    .pages > div {
-        scroll-snap-align: end;
-    }
+
 
 
 
@@ -147,35 +149,58 @@ span:hover{
         box-shadow: 0 0 2em 0.5em var(--clr-neon);
         transition: opacity 100ms linear;
     }*/
+.card-page {
+    background-color: #100e17;
+    height: 100vh;
+}
+
 
 .card-container {
     align-items: center;
-    width: 100vw;
     overflow-x: scroll;
     display: flex;
-    background-color: #100e17;
+    height: 80vh;
     padding: 3rem;
-    height: 100vh;
 }
 .card {
-    min-width: 300px;
+    min-width: 250px;
     height: 350px;
     border-radius: 16px;
     background-color: #17141d;
     box-shadow: -1rem 0 3rem #000;
     display: flex;
+    align-items: center;
     flex-direction: column;
     padding: 1.5rem;
     transition: 0.2s;
+    transform: rotateY(5deg);
+    transform-style: preserve-3d;
+}
+
+.flip-effect{
+
+}
+
+.card > img {
+    
+}
+.card-img{
+    align-items: center;
+    justify-content: center;
+    transform: translateZ(5em);
+}
+
+.card-back{
+    position: absolute;
+    transform: rotateY(180deg);
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
 }
 
 
 
-.card .category-title {
-    font-size: 14px;
-    color: #fff;
-    margin-bottom: 1rem;
-}
+
 
 .card .card-title {
     font-size: 20px;
@@ -183,20 +208,22 @@ span:hover{
 }
 
 .card .card-header {
-    margin-bottom: auto;
+    transform: translateZ(3em);
 }
 
 
 
 
 .card:not(:first-child) {
-    margin-left: -130px;
+    margin-left: -100px;
 }
+
 .card:hover {
-    transform: translateY(-1rem);
+    transform: rotateY(180deg);
+    transition-duration: 3s;
 }
     .card:hover ~ .card {
-        transform: translateX(130px);
+        transform: translateX(100px);
     }
 
 body .card-container::-webkit-scrollbar {
@@ -216,27 +243,26 @@ body .card-container::-webkit-scrollbar-track {
 
 .decks {
     background-color: #100e17;
-    height: 100vh;
 
 }
 .decks-wrapper {
-    height: 100vh;
-    align-items: center;
-    justify-content: center;
-    display: grid;
-    grid-template-rows: auto auto auto auto;
-    row-gap: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 3em;
+    margin-right: 3em;
 }
     .decks-wrapper > div {
        
-        display: grid;
-        grid-template-columns: auto auto auto;
-        column-gap: 5vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         
     }
 
 .deck-title{
     font-size: 1em;
+    padding: 2em;
 
 
 }
@@ -244,12 +270,13 @@ body .card-container::-webkit-scrollbar-track {
 .deck {
     border-radius: 16px;
     background-color: white;
-    width: 27vw;
     box-shadow: 0 0 0.5em 0 var(--clr-neon);
+    height: 19em;
+    width: 28em;
 }
 .cr-cards-wrapper {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 7em 7em 7em 7em;
 }
 
 img {
