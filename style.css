@@ -93,7 +93,7 @@ h1 {
     }
 }
 
-span:hover{
+.name h1 span:hover{
     font-size: 7rem;
     transform: translateY(-4vh);
 }
