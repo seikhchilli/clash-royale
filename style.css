@@ -6,8 +6,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: "supercell", Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
     color: white;
     overflow: hidden;
 }
@@ -34,10 +32,7 @@ body {
     background-color: #488bf4;
     display: grid;
     grid-template-columns: 1fr;
-    height: 7vh;
-    position: sticky;
-    top: 0;
-    opacity: 0.3;
+    padding-bottom: 1em;
 }
 .nav-bar:hover{
     opacity: 1;
@@ -47,7 +42,7 @@ body {
 .nav-wrapper{
     padding-top: 0.75em;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 .nav-left{
     display: flex;
@@ -59,8 +54,8 @@ body {
    
 }
 .nav-link{
-    padding-right: 0.75em;
-    padding-left: 0.75em;
+    padding-right: 1em;
+    padding-left: 1em;
     color: white;
     padding-top: 0.25em;
     border-radius: 7%;
@@ -72,23 +67,33 @@ body {
 
 .landing-page {
     height: 100vh;
-    background-image: url("cr_bg.jpg");
+    background-image: url("img/cr_bg.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 h1 {
     padding: 0;
     height: 7rem;
-    width: 7em;
     font-family: "supercell", Arial, sans-serif;
     font-size: 6em;
     color: white;
     text-shadow: 0 1px 5px grey, 0 4px 3px black;
     display: flex;
     cursor: default;
+}
+@media only screen and (max-width: 600px) {
+    .landing-page {
+        background-image: url("img/phone_bg.jpg");
+    }
+
+    h1 {
+        height: 2em;
+        font-size: 2em;
+    }
 }
 
 span:hover{
